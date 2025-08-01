@@ -7,7 +7,8 @@ WORKDIR /webapp
 RUN pip install -r requirements.txt
 
 COPY webapp/* /webapp
+#COPY roberta-sequence-classification-9.onnx /webapp
 
-ENVIRONMENT [ "python" ]
+ENTRYPOINT [ "python" ]
 
 CMD [ "app.py" ]
